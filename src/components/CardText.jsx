@@ -1,49 +1,35 @@
 import Cards from "./Cards";
 
 function CardText() {
-
   const features = [
     {
-        
-      title: "Showcase Your App",
-      text: "Professional looking showcase."
+      icon: <i className="fa-solid fa-screwdriver-wrench"></i>,
+      title: "UI UX Designer",
+      text: "Create a beautiful and useful UI display for ease of use of the application for users.",
     },
     {
-      title: "Easy to Customize",
-      text: "Replace text and images."
+      icon: <i className="fa-solid fa-computer"></i>,
+      title: "Web Programming",
+      text: "Build a quality website with the best technology and optimization on search engines.",
     },
     {
-      title: "Unlimited Colors",
-      text: "Change colors easily."
+      icon: <i className="fa-solid fa-mobile-retro"></i>,
+      title: "App Development",
+      text: "Create an app from your own business for a more professional business performance.",
     },
-    {
-      title: "Responsive",
-      text: "Looks good everywhere."
-    },
-    {
-      title: "Designed to Convert",
-      text: "Increase conversions."
-    },
-    {
-      title: "No Boundaries",
-      text: "Built using Bootstrap."
-    }
   ];
 
   return (
-
     <section className="features">
-
       {features.map((feature) => (
         <Cards
           key={feature.title}
+          icon={feature.icon}
           title={feature.title}
           text={feature.text}
         />
       ))}
-
     </section>
-
   );
 }
 
