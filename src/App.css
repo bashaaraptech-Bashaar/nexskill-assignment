@@ -1,11 +1,15 @@
-*{
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-/* Navbar */
 
-.navbar{
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
     width: 100%;
     padding: 25px 80px;
 
@@ -16,26 +20,30 @@
     position: absolute;
     top: 0;
     left: 0;
+
     z-index: 100;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.logo img{
+.logo img {
     width: 35px;
 }
 
-.logo h3{
-    color: rgb(255, 255, 255);
+.logo h3 {
+    color: white;
+
+    font-family: "Outfit", sans-serif;
+
     font-size: 20px;
     font-weight: 700;
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
     align-items: center;
     gap: 35px;
@@ -43,127 +51,434 @@
     list-style: none;
 }
 
-.navbar ul li{
-    color: rgb(255, 255, 255);
+.navbar ul li {
+    color: white;
+
+    font-family: "Outfit", sans-serif;
+
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
+
     cursor: pointer;
-    transition: .3s;
+
+    transition: 0.3s;
 }
 
-.navbar ul li:hover{
-    color: #e4550d;
+.navbar ul li:hover {
+    color: #ff8a00;
 }
 
-.hero-button{
+
+/* NAVBAR BUTTON */
+
+.hero-button {
     padding: 10px 22px;
+
     border: 2px solid white;
     border-radius: 30px;
 
     background: transparent;
     color: white;
 
+    font-family: "Outfit", sans-serif;
+
     font-size: 13px;
     font-weight: 600;
+
     cursor: pointer;
-    transition: .3s;
+
+    transition: 0.3s;
 }
 
-.hero-button:hover{
+.hero-button:hover {
     background: white;
     color: #ff5b6d;
 }
-.hero{
-   padding: 25px 80px;
-  display:flex;
-    justify-content:space-between;
-    align-items:center;
- background: linear-gradient(135deg, #ff7b38 0%, #ff5f6d 50%, #ff3c83 100%);
-    
-    margin:auto;
 
-    min-height:90vh;
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    padding: 25px 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #ff7b38 0%,
+        #ff5f6d 50%,
+        #ff3c83 100%
+    );
+
+    margin: auto;
+
+    min-height: 90vh;
 }
-.hero-text{
+
+
+/* HERO TEXT */
+
+.hero-text {
     width: 50%;
+
     color: white;
 }
 
-.hero-text h1{
+.hero-text h1 {
+    font-family: "Outfit", sans-serif;
+
     font-size: 58px;
-    line-height: 1.2;
+    line-height: 1.15;
+
+    font-weight: 700;
+
     margin-bottom: 20px;
+
+    letter-spacing: -1px;
 }
 
-.hero-text p{
+.hero-text p {
+    font-family: "Outfit", sans-serif;
+
     font-size: 17px;
     line-height: 1.8;
+
+    font-weight: 300;
+
     margin-bottom: 25px;
 }
 
-.hero-text ul{
+.hero-text ul {
     list-style: none;
+
     margin-bottom: 35px;
 }
 
-.hero-text ul li{
+.hero-text ul li {
     margin-bottom: 12px;
+
+    font-family: "Outfit", sans-serif;
+
     font-size: 16px;
+    font-weight: 400;
 }
 
-.hero-text button{
+
+/* HERO LIST CHECK */
+
+.hero-text ul li::before {
+    content: "✓";
+
+    margin-right: 10px;
+
+    font-weight: 700;
+}
+
+
+/* HERO MAIN BUTTON */
+
+.hero-text button {
     padding: 15px 35px;
+
     border: none;
     border-radius: 30px;
 
     background: white;
     color: #ff4f73;
 
+    font-family: "Outfit", sans-serif;
+
     font-size: 16px;
     font-weight: 600;
+
     cursor: pointer;
-
-    transition: .3s;
-}
-
-.hero-text button:hover{
-    transform: translateY(-3px);
-}
-.hero-image{
-    width: 45%;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-image img{
-    width: 400px;
-    max-width: 100%;
-}
-.features{
-    width: 100%;
-    padding: 100px 80px;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-
-    background: #fff;
-}
-.card{
-    background: #fff;
-
-    padding: 35px 25px;
-
-    border-radius: 10px;
-
-    text-align: left;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 
     transition: 0.3s;
 }
 
-.card:hover{
+.hero-text button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image {
+    width: 45%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.hero-image img {
+    width: 400px;
+
+    max-width: 100%;
+
+    filter:
+        drop-shadow(
+            0 20px 25px rgba(0, 0, 0, 0.2)
+        );
+
+    transition: 0.4s ease;
+}
+
+.hero-image img:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    width: 100%;
+
+    padding: 100px 80px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+    background: #fff;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background: #fff;
+
+    padding: 35px 25px;
+
+    min-height: 260px;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+    border:
+        1px solid rgba(0, 0, 0, 0.05);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+
+/* CARD HOVER */
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.13);
+}
+
+
+/* =========================
+   ORANGE ICON
+========================= */
+
+.icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 138, 0, 0.1);
+
+    color: #ff8a00;
+
+    font-size: 25px;
+
+    transition: 0.3s ease;
+}
+
+
+/* ICON HOVER */
+
+.card:hover .icon {
+    background: #ff8a00;
+
+    color: white;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.card h3 {
+    color: #222;
+
+    font-family: "Outfit", sans-serif;
+
+    font-size: 23px;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.card p {
+    color: #777;
+
+    font-family: "Outfit", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    font-weight: 300;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 22px 40px;
+    }
+
+    .hero {
+        padding: 100px 50px 60px;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .features {
+        padding: 70px 50px;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 20px 25px;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .hero {
+        padding: 120px 25px 60px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 50px;
+
+        min-height: auto;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .hero-text ul li {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 300px;
+    }
+
+    .features {
+        padding: 60px 25px;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .card {
+        min-height: auto;
+
+        padding: 30px 25px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+    .logo h3 {
+        font-size: 18px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-image img {
+        width: 250px;
+    }
+
+    .hero-button {
+        padding: 8px 16px;
+    }
 }
